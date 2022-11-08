@@ -2,21 +2,26 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  siteMetadata: {
-    title: `My Github Pages`,
-    siteUrl: `https://www.yourdomain.tld`
-  },
-  plugins: [{
-    resolve: 'gatsby-plugin-google-analytics',
-    options: {
-      "trackingId": "G-V88YY4SCDX"
-    }
-  }, "gatsby-plugin-sitemap", "gatsby-transformer-remark", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
+    siteMetadata: {
+        title: `Aviad Levy`,
+        siteUrl: `https://aviadlevy.github.io`
     },
-    __key: "pages"
-  }]
+    plugins: [
+        {
+            resolve: 'gatsby-plugin-google-gtag',
+            options: {
+                "trackingIds": ["G-V88YY4SCDX"]
+            }
+        },
+        "gatsby-plugin-sitemap",
+        "gatsby-transformer-remark",
+        `gatsby-plugin-styled-components`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `content`,
+                path: `${__dirname}/src/content`,
+            },
+        },
+    ]
 };
