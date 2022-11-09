@@ -1,12 +1,12 @@
 import React from "react"
-import {graphql} from "gatsby"
 
 import Layout from "../components/Layout"
 import Template from "../components/Template"
+import {graphql} from "gatsby";
 
-const IndexPage = ({data}) => {
+const BlogPage = ({data}) => {
     function getContent() {
-        return data.template.edges.filter(edge => edge.node.frontmatter.slug === "home").map(edge => edge.node)[0];
+        return data.template.edges.filter(edge => edge.node.frontmatter.slug === "projects").map(edge => edge.node)[0];
     }
 
     return (
@@ -16,7 +16,7 @@ const IndexPage = ({data}) => {
     )
 }
 
-export default IndexPage
+export default BlogPage
 
 export const pageQuery = graphql`
   {

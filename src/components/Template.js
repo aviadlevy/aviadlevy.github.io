@@ -15,18 +15,26 @@ const StyledSection = styled.section`
   }
 `
 
-const Hero = ({content}) => {
+const Template = ({content}) => {
     const {frontmatter, rawMarkdownBody} = content
-    return (
-        <StyledSection id="hero">
-            <h1 className="title">
-                {frontmatter.greetings}{" "}
-                <span role="img" aria-label="emoji">
+    let title;
+    if (frontmatter.greetings !== "") {
+        title = <h1 className="title">
+            {frontmatter.greetings}{" "}
+            <span role="img" aria-label="emoji">
           {frontmatter.emoji}
         </span>
-                <br/>
-                {frontmatter.title}
-            </h1>
+            <br/>
+            {frontmatter.title}
+        </h1>;
+    } else {
+        title = <h1 className="title">
+            {frontmatter.title}
+        </h1>;
+    }
+    return (
+        <StyledSection id="hero">
+            {title}
             <h2 className="subtitle">
                 {frontmatter.subtitlePrefix}{" "}
                 <span className="highlighted">{frontmatter.subtitleHighlight}</span>{" "}
@@ -37,4 +45,4 @@ const Hero = ({content}) => {
     )
 }
 
-export default Hero
+export default Template
