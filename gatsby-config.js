@@ -4,7 +4,21 @@
 module.exports = {
     siteMetadata: {
         title: `Aviad Levy`,
-        siteUrl: `https://aviadlevy.github.io`
+        siteUrl: `https://aviadlevy.github.io`,
+        menuLinks: [
+            {
+                name: 'Home',
+                link: '/'
+            },
+            {
+                name: 'Projects',
+                link: '/projects'
+            },
+            {
+                name: 'Blog',
+                link: '/blog'
+            }
+        ]
     },
     plugins: [
         {

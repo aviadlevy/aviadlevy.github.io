@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-
-import GlobalStyle from "./GlobalStyle"
-import Navbar from "./Navbar"
-import Footer from "./Footer"
+import styled from "styled-components";
+import React from "react";
+import {graphql, StaticQuery} from "gatsby";
+import Header from "./Header";
+import Footer from "./Footer";
+import GlobalStyle from "./GlobalStyle";
 
 const StyledLayout = styled.div`
   width: 100%;
@@ -15,21 +15,36 @@ const StyledLayout = styled.div`
 
   #main-content {
     width: 100%;
-    max-width: 62.5rem;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 2.5rem;
+    padding: 0 1.0875rem;
   }
 `
 
-const Layout = ({children}) => {
-    return (
-        <StyledLayout>
-            <GlobalStyle/>
-            <Navbar/>
-            <main id="main-content">{children}</main>
-            <Footer/>
-        </StyledLayout>
-    )
-}
+const Layout = ({children}) => (
+    <StaticQuery
+        query={graphql`
+      query SiteTitleQuery {
+        site {
+          siteMetadata {
+            title
+             menuLinks {
+               name
+               link
+             }
+          }
+        }
+      }
+    `}
+        render={data => (
+            <StyledLayout>
+                <GlobalStyle/>
+                <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title}/>
+                <main id="main-content">{children}</main>
+                <Footer/>
+            </StyledLayout>
+        )}
+    />
+)
 
-export default Layout
+export default Layout;
