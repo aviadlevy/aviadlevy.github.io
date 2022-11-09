@@ -1,6 +1,5 @@
 import * as React from "react"
 import {Link} from "gatsby"
-import {BrowserRouter} from "react-router-dom";
 import Layout from "../components/Layout";
 
 const pageStyles = {
@@ -27,7 +26,6 @@ const codeStyles = {
 
 const NotFoundPage = () => {
   return (
-      <BrowserRouter>
         <Layout>
           <main style={pageStyles}>
             <h1 style={headingStyles}>Page not found</h1>
@@ -46,7 +44,6 @@ const NotFoundPage = () => {
             </p>
           </main>
         </Layout>
-      </BrowserRouter>
   )
 }
 
