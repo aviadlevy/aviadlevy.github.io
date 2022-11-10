@@ -30,6 +30,8 @@ module.exports = {
         "gatsby-plugin-sitemap",
         "gatsby-transformer-remark",
         `gatsby-plugin-styled-components`,
+        `gatsby-plugin-image`,
+        `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {

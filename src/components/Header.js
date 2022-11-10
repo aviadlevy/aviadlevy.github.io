@@ -1,8 +1,9 @@
 import React from "react"
 import {Link} from "gatsby"
 import PropTypes from "prop-types"
+import {StaticImage} from "gatsby-plugin-image"
 
-const Header = ({siteTitle, menuLinks}) => (
+const Header = ({menuLinks}) => (
     <header
         style={{
             background: "black",
@@ -21,17 +22,14 @@ const Header = ({siteTitle, menuLinks}) => (
                 zIndex: "12",
             }}
         >
-            <h1 style={{margin: 0, flex: 1}}>
-                <Link
-                    to="/"
-                    style={{
-                        color: "white",
-                        textDecoration: "none",
-                    }}
-                >
-                    {siteTitle}
-                </Link>
-            </h1>
+            <StaticImage src="../images/profile.png"
+                         alt="Aviad Levy"
+                         placeholder="blurred"
+                         layout="constrained"
+                         width={75}
+                         height={75}
+                         style={{margin: 0,}}/>
+            <div style={{display: "flex", flex: 1}}/>
             <div>
                 <nav>
                     <ul style={{display: "flex", flex: 1}}>

@@ -39,7 +39,7 @@ const Layout = ({children}) => (
         render={data => (
             <StyledLayout>
                 <GlobalStyle/>
-                <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title}/>
+                <Header menuLinks={data.site.siteMetadata.menuLinks}/>
                 <main id="main-content">{children}</main>
                 <Footer/>
             </StyledLayout>
