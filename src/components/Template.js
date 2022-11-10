@@ -16,7 +16,7 @@ const StyledSection = styled.section`
 `
 
 const Template = ({content}) => {
-    const {frontmatter, rawMarkdownBody} = content
+    const {frontmatter, html} = content
     let title;
     if (frontmatter.greetings !== "") {
         title = <h1 className="title">
@@ -40,7 +40,9 @@ const Template = ({content}) => {
                 <span className="highlighted">{frontmatter.subtitleHighlight}</span>{" "}
                 {frontmatter.subtitleSuffix}
             </h2>
-            <div className="description">{rawMarkdownBody}</div>
+            <section
+                dangerouslySetInnerHTML={{__html: html}}
+            />
         </StyledSection>
     )
 }

@@ -7,4 +7,3 @@ subtitlePrefix: "I am a"
 subtitleHighlight: "Software Engineer"
 subtitleSuffix: "who loves to code!"
 ---
-Here we will have some content

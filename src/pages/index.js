@@ -32,7 +32,7 @@ export const pageQuery = graphql`
             subtitleSuffix
             slug
           }
-          rawMarkdownBody
+          html
         }
       }
     }
