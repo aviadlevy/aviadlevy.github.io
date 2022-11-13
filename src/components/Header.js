@@ -22,7 +22,7 @@ const Header = ({menuLinks}) => (
                 zIndex: "12",
             }}
         >
-            <StaticImage src="../images/profile.png"
+            <StaticImage src="../images/icon.png"
                          alt="Aviad Levy"
                          placeholder="blurred"
                          layout="constrained"

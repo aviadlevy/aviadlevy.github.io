@@ -4,7 +4,12 @@
 module.exports = {
     siteMetadata: {
         title: `Aviad Levy`,
+        description: `Aviad Levy's website`,
         siteUrl: `https://aviadlevy.github.io`,
+        social: {
+            twitter: `aviadlevy`
+        },
+        twitterUsername: `@aviadlevy`,
         menuLinks: [
             {
                 name: 'Home',
@@ -38,6 +43,18 @@ module.exports = {
                 name: `content`,
                 path: `${__dirname}/src/content`,
             },
+        },
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: "Aviad Levy",
+                short_name: "Aviad Levy",
+                start_url: "/",
+                background_color: "#6b37bf",
+                theme_color: "#6b37bf",
+                display: "standalone",
+                icon: "src/images/icon.png",
+            }
         },
     ]
 };

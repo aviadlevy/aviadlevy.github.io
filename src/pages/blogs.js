@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import Template from "../components/Template"
 import {graphql} from "gatsby";
+import Seo from "../components/Seo";
 
 const BlogPage = ({data}) => {
     function getContent() {
@@ -17,6 +18,8 @@ const BlogPage = ({data}) => {
 }
 
 export default BlogPage
+
+export const Head = () => <Seo title="Blogs"/>
 
 export const pageQuery = graphql`
   {

@@ -3,6 +3,7 @@ import {graphql} from "gatsby"
 
 import Layout from "../components/Layout"
 import Template from "../components/Template"
+import Seo from "../components/Seo";
 
 const IndexPage = ({data}) => {
     function getContent() {
@@ -17,6 +18,8 @@ const IndexPage = ({data}) => {
 }
 
 export default IndexPage
+
+export const Head = () => <Seo title="Home"/>
 
 export const pageQuery = graphql`
   {
