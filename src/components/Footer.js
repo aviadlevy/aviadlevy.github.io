@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import {Link} from "gatsby";
 
 const StyledFooter = styled.footer`
   width: 100%;
@@ -17,16 +18,35 @@ const StyledFooter = styled.footer`
   font-weight: 700;
 `
 
+const footerLinks = {
+    "GitHub": "https://github.com/aviadlevy",
+    "Twitter": "https://twitter.com/AviadLevy",
+    "Mastodon": "https://tooot.im/web/@aviadlevy",
+    "Linkedin": "https://www.linkedin.com/in/aviadlevy/",
+}
+
 const Footer = () => (
     <StyledFooter>
-        <a
-            href="https://github.com/aviadlevy"
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-            aria-label="External Link"
-        >
-            GitHub
-        </a>
+        <ul style={{display: "flex"}}>
+            {Object.keys(footerLinks).map((name) => (
+                <li
+                    key={name}
+                    style={{
+                        listStyleType: `none`,
+                        padding: `1rem`,
+                    }}
+                >
+                    <Link
+                        to={footerLinks[name]}
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                        aria-label="External Link"
+                    >
+                        {name}
+                    </Link>
+                </li>
+            ))}
+        </ul>
     </StyledFooter>
 )
 
