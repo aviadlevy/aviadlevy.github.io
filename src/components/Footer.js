@@ -21,7 +21,7 @@ const StyledFooter = styled.footer`
 const footerLinks = {
     "GitHub": "https://github.com/aviadlevy",
     "Twitter": "https://twitter.com/AviadLevy",
-    "Mastodon": "https://tooot.im/web/@aviadlevy",
+    "Mastodon": "https://tooot.im/@aviadlevy",
     "Linkedin": "https://www.linkedin.com/in/aviadlevy/",
 }
 
@@ -39,8 +39,7 @@ const Footer = () => (
                     <Link
                         to={footerLinks[name]}
                         target="_blank"
-                        rel="nofollow noopener noreferrer"
-                        aria-label="External Link"
+                        rel="me"
                     >
                         {name}
                     </Link>
