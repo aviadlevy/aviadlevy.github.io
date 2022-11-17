@@ -28,7 +28,6 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
-            greetings
             emoji
             subtitlePrefix
             subtitleHighlight

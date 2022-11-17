@@ -33,7 +33,12 @@ module.exports = {
             }
         },
         "gatsby-plugin-sitemap",
-        "gatsby-transformer-remark",
+        {
+            resolve: "gatsby-transformer-remark",
+            options: {
+                plugins: [`gatsby-remark-responsive-iframe`],
+            }
+        },
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-image`,
         `gatsby-plugin-sharp`,

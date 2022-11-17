@@ -1,9 +1,10 @@
 ---
 slug: "home"
-greetings: "Hello"
 emoji: "👋"
-title: "I'm Aviad Levy"
-subtitlePrefix: "I am a"
-subtitleHighlight: "Software Engineer"
-subtitleSuffix: "who loves to code!"
+title: "Hello"
+subtitlePrefix: "I'm "
+subtitleHighlight: "Aviad Levy"
+subtitleSuffix: ""
 ---
+
+## Software Engineer who loves to code!

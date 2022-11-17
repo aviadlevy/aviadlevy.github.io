@@ -1,0 +1,61 @@
+const path = require(`path`)
+const {createFilePath} = require(`gatsby-source-filesystem`)
+
+const projectTemplate = path.resolve(`./src/templates/nodes.js`)
+
+exports.createPages = async ({graphql, actions, reporter}) => {
+    const {createPage} = actions
+
+    const result = await graphql(`
+    {
+      allMarkdownRemark {
+        nodes {
+          id
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  `)
+
+    if (result.errors) {
+        reporter.panicOnBuild(
+            `There was an error loading your nodes`,
+            result.errors
+        )
+        return
+    }
+    const nodes = result.data.allMarkdownRemark.nodes
+
+    if (nodes.length > 0) {
+        nodes.forEach((node, index) => {
+            const previousNodeId = index === 0 ? null : nodes[index - 1].id
+            const nextNodeId = index === nodes.length - 1 ? null : nodes[index + 1].id
+
+            createPage({
+                path: node.fields.slug,
+                component: projectTemplate,
+                context: {
+                    id: node.id,
+                    previousNodeId,
+                    nextNodeId,
+                },
+            })
+        })
+    }
+}
+
+exports.onCreateNode = ({node, actions, getNode}) => {
+    const {createNodeField} = actions
+
+    if (node.internal.type === `MarkdownRemark`) {
+        const value = createFilePath({node, getNode})
+
+        createNodeField({
+            name: `slug`,
+            node,
+            value,
+        })
+    }
+}
