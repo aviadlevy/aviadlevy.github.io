@@ -29,19 +29,16 @@ exports.createPages = async ({graphql, actions, reporter}) => {
     const nodes = result.data.allMarkdownRemark.nodes
 
     if (nodes.length > 0) {
-        nodes.forEach((node, index) => {
-            const previousNodeId = index === 0 ? null : nodes[index - 1].id
-            const nextNodeId = index === nodes.length - 1 ? null : nodes[index + 1].id
-
-            createPage({
-                path: node.fields.slug,
-                component: projectTemplate,
-                context: {
-                    id: node.id,
-                    previousNodeId,
-                    nextNodeId,
-                },
-            })
+        nodes.forEach((node) => {
+            if (!node.fields.slug.includes("README")) {
+                createPage({
+                    path: node.fields.slug,
+                    component: projectTemplate,
+                    context: {
+                        id: node.id,
+                    },
+                })
+            }
         })
     }
 }
@@ -50,7 +47,7 @@ exports.onCreateNode = ({node, actions, getNode}) => {
     const {createNodeField} = actions
 
     if (node.internal.type === `MarkdownRemark`) {
-        const value = createFilePath({node, getNode})
+        const value = createFilePath({node, getNode}).replaceAll(" ", "-")
 
         createNodeField({
             name: `slug`,

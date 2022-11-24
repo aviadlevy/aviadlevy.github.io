@@ -2,8 +2,25 @@
 slug: "blogs"
 emoji: ""
 title: "Blogs"
-subtitlePrefix: "Here you'll find a list of my"
-subtitleHighlight: "blogs"
-subtitleSuffix: ""
+subtitlePrefix: "My"
+subtitleHighlight: "blog posts"
+subtitleSuffix: "are listed below"
 ---
-Here we will have some content
+
+<a href="/blogs/CICD-of-microservices-architecture-with-GitLab" style="display: inherit">
+<div class="card"> 
+
+## CI/CD of microservices architecture with GitLab
+
+### How we made our microservices continuous integration & delivery process easily maintained
+
+</div></a>
+<a href="/blogs/CICD-of-microservices-architecture-with-GitLab-—-Pt.-2/" style="display: inherit">
+<div class="card"> 
+
+## CI/CD of microservices architecture with GitLab — Pt. 2
+
+### How we used GitLab‘s dynamic child pipelines to maintain and expand our services to many regions
+
+</div>
+</a>

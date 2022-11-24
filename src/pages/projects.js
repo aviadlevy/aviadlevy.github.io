@@ -4,6 +4,14 @@ import Layout from "../components/Layout"
 import Template from "../components/Template"
 import {graphql} from "gatsby";
 import Seo from "../components/Seo";
+import styled from "styled-components";
+
+const StyledLinksInProject = styled.main`
+  a {
+    color: #1f6feb;
+    font-weight: bold;
+  }
+`
 
 const ProjectsPage = ({data}) => {
     function getContent() {
@@ -12,7 +20,9 @@ const ProjectsPage = ({data}) => {
 
     return (
         <Layout>
-            <Template content={getContent()}/>
+            <StyledLinksInProject>
+                <Template content={getContent()}/>
+            </StyledLinksInProject>
         </Layout>
     )
 }
