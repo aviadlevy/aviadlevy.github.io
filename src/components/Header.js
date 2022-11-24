@@ -22,13 +22,15 @@ const Header = ({menuLinks}) => (
                 zIndex: "12",
             }}
         >
-            <StaticImage src="../images/icon.png"
-                         alt="Aviad Levy"
-                         placeholder="blurred"
-                         layout="constrained"
-                         width={75}
-                         height={75}
-                         style={{margin: 0,}}/>
+            <Link to="/">
+                <StaticImage src="../images/icon.png"
+                             alt="Aviad Levy"
+                             placeholder="blurred"
+                             layout="constrained"
+                             width={75}
+                             height={75}
+                             style={{margin: 0,}}/>
+            </Link>
             <div style={{display: "flex", flex: 1}}/>
             <div>
                 <nav>

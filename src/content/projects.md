@@ -10,4 +10,4 @@ subtitleSuffix: ""
 ## Plant generator
 
 - [Try it now](/projects/plant-generator)
-- [Source Code](https://github.com/aviadlevy/plant-generator)
+- <a target="_blank" rel="noopener noreferrer" href="https://github.com/aviadlevy/plant-generator">Source Code</a>
