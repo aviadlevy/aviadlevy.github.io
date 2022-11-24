@@ -22,7 +22,6 @@ const Template = ({content}) => {
         <span role="img" aria-label="emoji">
             {frontmatter.emoji}</span>
     </h1>;
-    let addThematicBreak = frontmatter.slug === 'projects' || frontmatter.slug === "blogs" ? <hr/> : "";
     return (
         <StyledSection id="hero">
             {title}
@@ -31,7 +30,6 @@ const Template = ({content}) => {
                 <span className="highlighted">{frontmatter.subtitleHighlight}</span>{" "}
                 {frontmatter.subtitleSuffix}
             </h2>
-            {addThematicBreak}
             <section
                 dangerouslySetInnerHTML={{__html: html}}
             />
