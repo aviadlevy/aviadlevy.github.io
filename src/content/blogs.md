@@ -24,3 +24,12 @@ subtitleSuffix: "are listed below"
 
 </div>
 </a>
+<a href="/blogs/How-to-Install-go-yara-Library-on-Windows/" style="display: inherit">
+<div class="card"> 
+
+## How to Install go-yara Library on Windows
+
+### Installing go-yara library on Windows using MSYS2 and MinGW.
+
+</div>
+</a>
