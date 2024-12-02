@@ -30,10 +30,10 @@ subtitleSuffix: "are listed below"
     <blockquote class="twitter-tweet" data-lang="en"><p lang="und" dir="ltr">▓▓▓▓▓▓▓▓▓░░░░░░░░░░░ 43%</p>&mdash; Hebrew Year Progress (@yearProgressHeb) <a href="https://twitter.com/yearProgressHeb/status/1099773897254359040?ref_src=twsrc%5Etfw">February 24, 2019</a></blockquote>
     </div>
 
-- ### <a target="_blank" rel="noopener noreferrer" href="https://botsin.space/@yearProgressHeb" class="projects">Mastodon</a>
+- ### <a target="_blank" rel="noopener noreferrer" href="https://mastodon.social/@yearProgressHeb" class="projects">Mastodon</a>
 
     <div class="center">
-    <blockquote data-lang="en"><p lang="und" dir="ltr">▓▓░░░░░░░░░░░░░ 15%</p>&mdash; Hebrew Year Progress (@yearProgressHeb) <a href="https://botsin.space/@yearProgressHeb/109376451284319991">Nov 20, 2022, 15:49</a></blockquote>
+    <blockquote class="twitter-tweet" data-lang="en"><p lang="und" dir="ltr">▓▓░░░░░░░░░░░░░ 17%</p>&mdash; Hebrew Year Progress (@yearProgressHeb) <a href="https://mastodon.social/@yearProgressHeb/113585373770390214">Dec 02, 2024</a></blockquote>
     </div>
 
 <br/>
